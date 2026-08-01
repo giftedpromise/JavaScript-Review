@@ -218,3 +218,74 @@ console.log(canVote1); //Yes
 let isMember = true;
 let discount = isMember ? 0.1 : 0;
 console.log(discount); //0.1
+
+//switch statement
+let day = 3;
+switch (day) {
+  case 1:
+    console.log("Monday");
+  case 2:
+    console.log("Tuesday");
+  case 3:
+    console.log("Wednesday");
+  case 4:
+    console.log("Thursday");
+  case 5:
+    console.log("Friday");
+  case 6:
+    console.log("Saturday");
+  case 7:
+    console.log("Sunday");
+}
+
+//functions
+//what is function
+// A function is a block of code that performs a specific task. It can take input in the form of parameters, execute a series of statements, and optionally return a value. Functions help organize code, promote reusability, and improve readability.
+//  In JavaScript, functions can be defined using the `function` keyword or as arrow functions.
+
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Alice"));
+
+function add(a, b) {
+  return a + b;
+}
+
+let sum3 = add(5, 3); //8
+console.log(sum3);
+
+//fuction declaration
+//A function declaration defines a function with the function keyword followed by a function name.
+function multiply(a, b) {
+  return a * b;
+}
+
+//function expression
+//A function expression stores a function inside a variable.
+const divide = function (a, b) {
+  return a / b;
+};
+
+const greet = function () {
+  console.log("Hello, World!");
+};
+
+//callback function
+//A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed.
+//  It allows for asynchronous programming and event handling.
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { id: 1, name: "John Doe" };
+    callback(data);
+  }, 1000);
+}
+
+fetchData(function (data) {
+  console.log("Data received:", data);
+});
+
+//arrow function
+//An arrow function is a concise way to write functions in JavaScript using the `=>` syntax. It does not have its own `this` context and is often used for shorter functions or callbacks.
+const add1 = (a, b) => a + b;

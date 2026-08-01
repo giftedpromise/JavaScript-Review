@@ -268,7 +268,7 @@ const divide = function (a, b) {
   return a / b;
 };
 
-const greet = function () {
+const greet2 = function () {
   console.log("Hello, World!");
 };
 
@@ -289,3 +289,31 @@ fetchData(function (data) {
 //arrow function
 //An arrow function is a concise way to write functions in JavaScript using the `=>` syntax. It does not have its own `this` context and is often used for shorter functions or callbacks.
 const add1 = (a, b) => a + b;
+
+//more example of arrow function
+const multiply1 = (a, b) => a * b;
+const divide1 = (a, b) => a / b;
+
+const greet1 = (name) => `Hello, ${name}!`;
+console.log(greet1("Alice")); //Hello, Alice!
+
+//more example of arrow function
+const square = (x) => x * x;
+console.log(square(5)); //25
+
+//global and local scope
+//Global scope refers to variables that are accessible from anywhere in the code,
+// while local scope refers to variables that are only accessible within the function or block in which they are defined.
+//  Variables declared outside of any function or block have global scope,
+//  while variables declared inside a function or block have local scope.
+
+//example of global and local scope
+let globalVar = "I am a global variable";
+function exampleFunction() {
+  let localVar = "I am a local variable";
+  console.log(globalVar); // Accessible
+  console.log(localVar); // Accessible
+}
+exampleFunction();
+console.log(globalVar); // Accessible
+//console.log(localVar); // Not Accessible

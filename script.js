@@ -348,3 +348,35 @@ car.start = function () {
 console.log(car.make); //Toyota
 console.log(car.model); //Camry
 console.log(car.year);
+
+//Accessing object properties
+//Object properties can be accessed using dot notation or bracket notation.
+console.log(person.name); //John
+console.log(person["age"]); //30
+
+//adding and modifying object properties
+person.gender = "Male"; //adding a new property
+
+person.age = 31; //modifying an existing property
+console.log(person.gender);
+
+//deleting object properties
+delete person.isStudent;
+//Object methods
+//Object methods are functions that are properties of an object.
+person.greet = function () {
+  console.log(`Hello, my name is ${this.name}.`);
+};
+
+const student = {
+  name: "Alice",
+  age: 20,
+  major: "Computer Science",
+  greet: function () {
+    console.log(`Hello, my name is ${this.name} and I study ${this.major}.`);
+  },
+};
+
+//Another way to create an object is by using a constructor function.
+//  A constructor function is a special type of function that is used to create and initialize objects.
+//  It is typically named with a capital letter to distinguish it from regular functions.

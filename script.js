@@ -380,3 +380,87 @@ const student = {
 //Another way to create an object is by using a constructor function.
 //  A constructor function is a special type of function that is used to create and initialize objects.
 //  It is typically named with a capital letter to distinguish it from regular functions.
+
+//Arrays in JavaScript
+//An array is a special type of object that is used to store multiple values in a single variable.
+//  Arrays are ordered collections of elements, and each element can be accessed using its index, which starts at 0.
+//  Arrays can contain elements of different data types, including numbers, strings, objects, and even other arrays.
+
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]);
+
+//Accessing elements in an array
+let color = ["Red", "Green", "Blue"];
+console.log(color[1]); //Green
+
+//Accessing the Last Array Element
+let lastElement = color[color.length - 1];
+console.log(lastElement); //Blue
+
+const cars = ["Toyota", "Honda", "Ford"];
+console.log(cars.length); //3
+
+//JavaScript new Array()
+let points = new Array(40, 100, 1, 5, 25, 10);
+console.log(points);
+
+//Array methods
+//Array methods are built-in functions that allow you to manipulate and interact with arrays.
+
+let numbers = [1, 2, 3, 4, 5];
+
+//length property - returns the number of elements in the array
+let size = numbers.length;
+console.log(size);
+
+console.log(numbers[2]);
+numbers[3] = 10;
+console.log(numbers); // [1, 2, 3, 10, 5]
+
+//push() - adds an element to the end of the array
+numbers.push(6);
+console.log(numbers); // [1, 2, 3, 4, 5, 6]
+
+//pop() - removes the last element from the array
+numbers.pop();
+console.log(numbers); // [1, 2, 3, 4, 5]
+
+//shift() - removes the first element from the array
+numbers.shift();
+console.log(numbers); // [2, 3, 4, 5]
+
+//unshift() - adds an element to the beginning of the array
+numbers.unshift(1);
+console.log(numbers); // [1, 2, 3, 4, 5]
+
+//slice() - returns a shallow copy of a portion of the array
+let sliced = numbers.slice(1, 4);
+console.log(sliced); // [2, 3, 4]
+
+//splice() - adds or removes elements from the array
+numbers.splice(2, 1, 6, 7);
+console.log(numbers); // [1, 2, 6, 7, 5]
+
+//forEach() - executes a provided function once for each array element
+numbers.forEach((num) => {
+  console.log(num);
+});
+
+//map() - creates a new array with the results of calling a function on every element
+//It creates a new array by applying a function to every element in the original array.
+
+//Important: map() does not change the original array.
+let doubled = numbers.map((num) => num * 2);
+console.log(doubled); // [2, 4, 12, 14, 10]
+
+//add 10 to each element in the array
+let AddTen = numbers.map((num) => num + 10);
+console.log(AddTen); // [11, 12, 16, 17, 15]
+
+//filter() - creates a new array with all elements that pass the test implemented by the provided function
+let filtered = numbers.filter((num) => num > 5);
+console.log(filtered); // [6, 7]
+
+//reduce() - executes a reducer function on each element of the array, resulting in a single output value
+let sum2 = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum2); // 35

@@ -464,3 +464,7 @@ console.log(filtered); // [6, 7]
 //reduce() - executes a reducer function on each element of the array, resulting in a single output value
 let sum2 = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum2); // 35
+
+//loops in JavaScript
+//Loops are used to execute a block of code repeatedly as long as a specified condition is true.
+//  JavaScript provides several types of loops, including `for`, `while`, and `do...while` loops.

@@ -468,3 +468,33 @@ console.log(sum2); // 35
 //loops in JavaScript
 //Loops are used to execute a block of code repeatedly as long as a specified condition is true.
 //  JavaScript provides several types of loops, including `for`, `while`, and `do...while` loops.
+//while loop
+//The `while` loop executes a block of code as long as a specified condition is true.
+//  It checks the condition before each iteration, and if the condition is false, the loop terminates.
+let i = 0;
+while (i < numbers.length) {
+  console.log(numbers[i]);
+  i++;
+}
+
+let j = 1;
+
+while (j <= 6) {
+  console.log(j);
+  j++;
+}
+
+//Do...while loop
+//The `do...while` loop is similar to the `while` loop, but it guarantees that the block of code will be executed at least once,
+// even if the condition is false.
+do {
+  console.log(j);
+  j++;
+} while (j <= 6);
+
+//for loop
+//The `for` loop is a control flow statement that allows you to execute a block of code a specific number of times.
+//  It consists of three parts: initialization, condition, and increment/decrement.
+for (let k = 0; k < numbers.length; k++) {
+  console.log(numbers[k]);
+}

@@ -1,5 +1,7 @@
 //alert("Hello, World!");
 
+//const { forwardRef } = require("react");
+
 // let input = document.getElementById("inputField");
 // input.value = "Enter your name here";
 
@@ -498,3 +500,72 @@ do {
 for (let k = 0; k < numbers.length; k++) {
   console.log(numbers[k]);
 }
+
+//More Example of for loop
+for (let k = 1; k <= 5; k++) {
+  console.log(k);
+}
+
+//continue and Break
+//The `continue` statement is used to skip the current iteration of a loop and move on to the next iteration.
+//Break in Loops
+//When break is encountered in a loop, the loop terminates immediately.
+
+//The program control is transfered to the statements following the loop.
+
+//No more loop iterations are executed.
+for (i = 0; i < 5; i++) {
+  if (i === 3) {
+    break;
+  }
+
+  console.log(i);
+}
+
+//continue
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+
+  console.log(i);
+}
+
+console.log(document);
+
+//DOM Manipulation
+//DOM manipulation refers to the process of using JavaScript to interact with and modify the Document Object Model (DOM) of a web page.
+//  The DOM is a representation of the HTML structure of a web page, and it allows developers to access and manipulate elements, attributes, and content dynamically.
+
+//Selecting Elements
+//Selecting elements from the DOM is the first step in manipulating them.
+//  JavaScript provides several methods to select elements based on their tag name, class, ID, or other attributes.
+//getElementById()
+const element = document.getElementById("myElement");
+console.log(element);
+element.textContent = "Hello, World!";
+
+const button = document.getElementById("btn");
+button.addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+//B. getElementsByClassName()
+
+//Selects elements by class.
+const paragraphs = document.getElementsByClassName("text");
+
+console.log(paragraphs);
+
+//getElementsByTagName()
+
+//Select elements by tag name
+const divs = document.getElementsByTagName("div");
+console.log(divs);
+
+//D. querySelector()
+
+//The most commonly used selector.
+
+//It returns the first matching element.
+const firstDiv = document.querySelector("div");

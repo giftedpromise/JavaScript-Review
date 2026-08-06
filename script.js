@@ -317,3 +317,34 @@ function exampleFunction() {
 exampleFunction();
 console.log(globalVar); // Accessible
 //console.log(localVar); // Not Accessible
+
+//Javascript Objects
+//An object is a collection of properties, where each property is a key-value pair.
+//  Objects are used to store and organize data in JavaScript.
+//  They can contain various data types, including other objects, arrays, functions, and primitive values.
+//creating an object
+let person = {
+  name: "John",
+  age: 30,
+  isStudent: false,
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}.`);
+  },
+};
+console.log(person);
+console.log(person.name); //John
+console.log(person.age); //30
+person.greet(); //Hello, my name is John.
+
+//creating an object using new Object()
+let car = new Object();
+car.make = "Toyota";
+car.model = "Camry";
+car.year = 2020;
+car.start = function () {
+  console.log("Car started.");
+};
+
+console.log(car.make); //Toyota
+console.log(car.model); //Camry
+console.log(car.year);

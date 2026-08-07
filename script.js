@@ -569,3 +569,15 @@ console.log(divs);
 
 //It returns the first matching element.
 const firstDiv = document.querySelector("div");
+
+//E. querySelectorAll()
+
+//Returns all matching elements.
+const allDivs = document.querySelectorAll("div");
+console.log(allDivs);
+
+//Changing Content
+//Once you have selected an element, you can change its content using properties like `textContent`, `innerHTML`, or `innerText`.
+const heading = document.getElementById("heading");
+heading.textContent = "New Heading";
+heading.innerHTML = "<span>New Heading</span>";

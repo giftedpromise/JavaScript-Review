@@ -557,7 +557,7 @@ const paragraphs = document.getElementsByClassName("text");
 
 console.log(paragraphs);
 
-//getElementsByTagName()
+//C. getElementsByTagName()
 
 //Select elements by tag name
 const divs = document.getElementsByTagName("div");
@@ -581,3 +581,55 @@ console.log(allDivs);
 const heading = document.getElementById("heading");
 heading.textContent = "New Heading";
 heading.innerHTML = "<span>New Heading</span>";
+
+//CHANGING STYLES
+//You can change the styles of an element using the `style` property.
+heading.style.color = "blue";
+heading.style.fontSize = "24px";
+//element.classList.add("new-class"); // Add a class
+//example of classList
+const element = document.getElementById("myElement");
+
+//element.classList.remove("old-class"); // Remove a class
+//remove a class from the element's class list
+element.classList.remove("old-class");
+
+//element.classList.toggle("active"); // Toggle a class
+
+//element.setAttribute("attributeName", "value"); // Set an attribute
+element.setAttribute("data-custom", "value");
+
+//element.getAttribute("attributeName"); // Get an attribute
+const attributeValue = element.getAttribute("data-custom");
+console.log(attributeValue); // Output: value
+
+//Dom Events
+//DOM events are actions or occurrences that happen in the browser, such as user interactions (clicks, key presses, mouse movements)
+//  or changes in the state of the document.
+//  JavaScript allows you to listen for these events and execute specific code in response to them.
+
+//EXAMPLE OF DOM EVENTS
+const button1 = document.getElementById("myButton");
+button1.addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+const inputField = document.getElementById("myInput");
+inputField.addEventListener("input", function () {
+  console.log("Input changed:", inputField.value);
+});
+//types of events
+//1. Mouse Events: These events are triggered by mouse actions, such as clicks, double-clicks, mouse movements, and hovering over elements.
+//2. Keyboard Events: These events are triggered by keyboard actions, such as key presses and releases.
+//3. Form Events: These events are triggered by form interactions, such as submitting a form or changing the value of an input field.
+//4. Window Events: These events are triggered by changes in the browser window, such as resizing or scrolling.
+//5. Touch Events: These events are triggered by touch interactions on touch-enabled devices, such as tapping or swiping.
+//6. Focus Events: These events are triggered when an element gains or loses focus, such as when a user clicks on an input field or navigates away from it.
+//7. Drag and Drop Events: These events are triggered by dragging and dropping elements within the browser window.
+//8. Media Events: These events are triggered by media elements, such as playing, pausing, or ending a video or audio file.
+//9. Custom Events: These events are user-defined events that can be created and triggered programmatically using JavaScript.
+//10. Animation Events: These events are triggered by CSS animations, such as when an animation starts, ends, or repeats.
+//11. Clipboard Events: These events are triggered by clipboard actions, such as copying, cutting, or pasting content.
+//12. Pointer Events: These events are triggered by pointer interactions, which can include mouse, touch, and stylus input.
+//13. Wheel Events: These events are triggered by mouse wheel actions, such as scrolling up or down within an element.
+//14. Load and Unload Events: These events are triggered when a page or resource is loaded or unloaded, such as when a user navigates to a new page or closes the browser window.

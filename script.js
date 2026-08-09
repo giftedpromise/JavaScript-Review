@@ -633,3 +633,35 @@ inputField.addEventListener("input", function () {
 //12. Pointer Events: These events are triggered by pointer interactions, which can include mouse, touch, and stylus input.
 //13. Wheel Events: These events are triggered by mouse wheel actions, such as scrolling up or down within an element.
 //14. Load and Unload Events: These events are triggered when a page or resource is loaded or unloaded, such as when a user navigates to a new page or closes the browser window.
+
+//input events
+//Input events are triggered when the value of an input element changes, such as when a user types in a text field or selects an option from a dropdown menu.
+//  The `input` event is commonly used to listen for changes in input elements and respond accordingly.
+const input = document.querySelector("#name");
+
+input.addEventListener("input", (event) => {
+  console.log(event.target.value);
+});
+
+//change events
+//Change events are triggered when the value of an input element changes and the element loses focus, such as when a user selects a different option from a dropdown menu or checks/unchecks a checkbox.
+//  The `change` event is commonly used to listen for changes in input elements and respond accordingly.
+const select = document.querySelector("#mySelect");
+select.addEventListener("change", (event) => {
+  console.log(event.target.value);
+});
+
+let countrySelect = document.getElementById("country");
+countrySelect.addEventListener("change", function () {
+  let selectedCountry = countrySelect.value;
+  console.log("Selected country:", selectedCountry);
+});
+
+//submit events
+//Submit events are triggered when a form is submitted, either by clicking a submit button or pressing the Enter key while focused on an input field within the form.
+//  The `submit` event is commonly used to listen for form submissions and perform actions such as validation or sending data to a server.
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("Form submitted!");
+});
+//preventDefault() stops the browser's default action.

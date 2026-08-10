@@ -665,3 +665,21 @@ form.addEventListener("submit", function (event) {
   console.log("Form submitted!");
 });
 //preventDefault() stops the browser's default action.
+//stop the form from submitting and refreshing the page.
+
+//Keyboard Events
+//Keyboard events are triggered by user interactions with the keyboard, such as pressing or releasing keys.
+//  The most common keyboard events are `keydown`, `keyup`, and `keypress` (deprecated).
+//  These events allow developers to respond to specific key actions and implement custom behavior based on user input.
+const inputField1 = document.getElementById("myInput");
+inputField1.addEventListener("keydown", function (event) {
+  console.log("Key down:", event.key);
+});
+inputField1.addEventListener("keyup", function (event) {
+  console.log("Key up:", event.key);
+});
+
+//form validation
+//Form validation is the process of checking user input in a form to ensure that it meets certain criteria before the form is submitted.
+//  It helps prevent invalid or incomplete data from being sent to the server and improves the overall user experience.
+//  Form validation can be performed using HTML attributes, JavaScript, or a combination of both.

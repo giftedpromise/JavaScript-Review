@@ -683,3 +683,15 @@ inputField1.addEventListener("keyup", function (event) {
 //Form validation is the process of checking user input in a form to ensure that it meets certain criteria before the form is submitted.
 //  It helps prevent invalid or incomplete data from being sent to the server and improves the overall user experience.
 //  Form validation can be performed using HTML attributes, JavaScript, or a combination of both.
+//example of form validation
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.querySelector("#name").value;
+
+  if (name === "") {
+    console.log("Name is required");
+  } else {
+    console.log("Form is valid");
+  }
+});

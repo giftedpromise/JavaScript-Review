@@ -383,6 +383,26 @@ const student = {
 //  A constructor function is a special type of function that is used to create and initialize objects.
 //  It is typically named with a capital letter to distinguish it from regular functions.
 
+//object destructuring
+//Object destructuring is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and readable way.
+//  It provides a convenient syntax for unpacking properties from objects into distinct variables.
+
+const person1 = {
+  name: "John",
+  age: 30,
+  isStudent: false,
+  country: "USA",
+};
+
+const { name, age, country } = person1;
+
+console.log(name);
+console.log(age);
+console.log(country);
+
+const { name: personName, age: personAge, isStudent: studentStatus } = person1;
+console.log(personName);
+
 //Arrays in JavaScript
 //An array is a special type of object that is used to store multiple values in a single variable.
 //  Arrays are ordered collections of elements, and each element can be accessed using its index, which starts at 0.

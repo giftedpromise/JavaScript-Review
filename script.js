@@ -408,6 +408,17 @@ console.log(personName);
 //you can give a default value to a variable while destructuring by using the assignment operator (=) followed by the default value.
 const { name: personName1, age: personAge1, gender = "Male" } = person1;
 
+//spread operator with objects
+//The spread operator (...) allows you to create a new object by copying the properties of an existing object into it.
+//  It provides a convenient way to merge objects or create shallow copies of objects.
+const person2 = {
+  name: "John",
+  age: 30,
+  isStudent: false,
+};
+const updatedPerson = { ...person2, age: 31, country: "USA" };
+console.log(updatedPerson);
+
 //Arrays in JavaScript
 //An array is a special type of object that is used to store multiple values in a single variable.
 //  Arrays are ordered collections of elements, and each element can be accessed using its index, which starts at 0.

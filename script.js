@@ -395,13 +395,18 @@ const person1 = {
 };
 
 const { name, age, country } = person1;
+const { name } = person1;
 
 console.log(name);
 console.log(age);
 console.log(country);
 
+//you can rename the variables while destructuring by using a colon (:) followed by the new variable name.
 const { name: personName, age: personAge, isStudent: studentStatus } = person1;
 console.log(personName);
+
+//you can give a default value to a variable while destructuring by using the assignment operator (=) followed by the default value.
+const { name: personName1, age: personAge1, gender = "Male" } = person1;
 
 //Arrays in JavaScript
 //An array is a special type of object that is used to store multiple values in a single variable.

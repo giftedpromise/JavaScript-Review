@@ -416,8 +416,18 @@ const person2 = {
   age: 30,
   isStudent: false,
 };
+
+const address = {
+  city: "Lagos",
+  country: "Nigeria",
+};
+
 const updatedPerson = { ...person2, age: 31, country: "USA" };
 console.log(updatedPerson);
+
+//combining objects using the spread operator
+const combinedObject = { ...person2, ...address };
+console.log(combinedObject);
 
 //Arrays in JavaScript
 //An array is a special type of object that is used to store multiple values in a single variable.

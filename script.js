@@ -741,3 +741,37 @@ form.addEventListener("submit", function (event) {
     console.log("Form is valid");
   }
 });
+
+//modern JavaScript features
+//Modern JavaScript features refer to the new syntax, methods, and capabilities
+// introduced in recent versions of JavaScript (ES6 and beyond).
+//  These features enhance the language's functionality, improve code readability,
+// and enable developers to write more efficient and maintainable code.
+//  Some of the key modern JavaScript features include arrow functions,
+// template literals, destructuring assignment, spread/rest operators, classes,
+//  modules, promises, async/await, and more.
+
+//let and const
+const height = 180; //block scope
+let name1 = "John"; //block scope
+
+//Difference between let, const, and var
+//let can be reassigned, but cannot be redeclared in the same scope. It has block scope,
+//  meaning it is only accessible within the block it is defined in.
+//const cannot be reassigned or redeclared. It also has block scope and is used
+// for values that should remain constant.
+//var can be reassigned and redeclared. It has function scope, meaning it is accessible
+//  within the function it is defined in, or globally if defined outside any function.
+
+//Block scope
+//block scope refers to the visibility and accessibility of variables within a specific block of code,
+//  such as within curly braces {}. Variables declared with let and const have block scope,
+// meaning they are only accessible within the block they are defined in.
+// In contrast, variables declared with var have function scope,
+// meaning they are accessible throughout the entire function they are defined in,
+//  regardless of block boundaries.
+
+//When to use each
+//Use let when you need to reassign a variable's value within a block scope.
+//Use const when you want to declare a variable that should not be reassigned and remains constant.
+//Use var when you need function-scoped variables, but it's generally recommended to use let and const for better scoping and maintainability.

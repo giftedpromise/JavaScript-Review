@@ -386,49 +386,89 @@ const student = {
 //object destructuring
 //Object destructuring is a feature in JavaScript that allows you to extract values from objects and assign them to variables in a more concise and readable way.
 //  It provides a convenient syntax for unpacking properties from objects into distinct variables.
+// OBJECT DESTRUCTURING
+// ================================
 
-const person1 = {
+const student1 = {
   name: "John",
   age: 30,
   isStudent: false,
   country: "USA",
 };
 
-const { name, age, country } = person1;
-const { name } = person1;
+// Basic destructuring
+const {
+  name: studentName,
+  age: studentAge,
+  country: studentCountry,
+} = student1;
 
-console.log(name);
-console.log(age);
-console.log(country);
+console.log(studentName);
+console.log(studentAge);
+console.log(studentCountry);
 
-//you can rename the variables while destructuring by using a colon (:) followed by the new variable name.
-const { name: personName, age: personAge, isStudent: studentStatus } = person1;
+// ================================
+// RENAMING VARIABLES
+// ================================
+
+const { name: personName, age: personAge, isStudent: studentStatus } = student1;
+
 console.log(personName);
+console.log(personAge);
+console.log(studentStatus);
 
-//you can give a default value to a variable while destructuring by using the assignment operator (=) followed by the default value.
-const { name: personName1, age: personAge1, gender = "Male" } = person1;
+// ================================
+// DEFAULT VALUES
+// ================================
 
-//spread operator with objects
-//The spread operator (...) allows you to create a new object by copying the properties of an existing object into it.
-//  It provides a convenient way to merge objects or create shallow copies of objects.
-const person2 = {
+const {
+  name: nameWithDefault,
+  age: ageWithDefault,
+  gender = "Male",
+} = student1;
+
+console.log(nameWithDefault);
+console.log(ageWithDefault);
+console.log(gender);
+
+// ================================
+// SPREAD OPERATOR
+// ================================
+
+const studentInfo = {
   name: "John",
   age: 30,
   isStudent: false,
 };
 
-const address = {
+const addressInfo = {
   city: "Lagos",
   country: "Nigeria",
 };
 
-const updatedPerson = { ...person2, age: 31, country: "USA" };
-console.log(updatedPerson);
+// Copy object
+const copiedStudent = {
+  ...studentInfo,
+};
 
-//combining objects using the spread operator
-const combinedObject = { ...person2, ...address };
-console.log(combinedObject);
+console.log(copiedStudent);
 
+// Update object
+const updatedStudent = {
+  ...studentInfo,
+  age: 31,
+  country: "USA",
+};
+
+console.log(updatedStudent);
+
+// Combine objects
+const combinedStudent = {
+  ...studentInfo,
+  ...addressInfo,
+};
+
+console.log(combinedStudent);
 //Arrays in JavaScript
 //An array is a special type of object that is used to store multiple values in a single variable.
 //  Arrays are ordered collections of elements, and each element can be accessed using its index, which starts at 0.
@@ -577,7 +617,7 @@ for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
 
-console.log(document);
+//console.log(document);
 
 //DOM Manipulation
 //DOM manipulation refers to the process of using JavaScript to interact with and modify the Document Object Model (DOM) of a web page.
@@ -625,16 +665,16 @@ console.log(allDivs);
 //Changing Content
 //Once you have selected an element, you can change its content using properties like `textContent`, `innerHTML`, or `innerText`.
 const heading = document.getElementById("heading");
-heading.textContent = "New Heading";
-heading.innerHTML = "<span>New Heading</span>";
+//heading.textContent = "New Heading";
+//heading.innerHTML = "<span>New Heading</span>";
 
 //CHANGING STYLES
 //You can change the styles of an element using the `style` property.
-heading.style.color = "blue";
-heading.style.fontSize = "24px";
+// heading.style.color = "blue";
+// heading.style.fontSize = "24px";
 //element.classList.add("new-class"); // Add a class
 //example of classList
-const element = document.getElementById("myElement");
+const myElement = document.getElementById("myElement");
 
 //element.classList.remove("old-class"); // Remove a class
 //remove a class from the element's class list
@@ -655,15 +695,15 @@ console.log(attributeValue); // Output: value
 //  JavaScript allows you to listen for these events and execute specific code in response to them.
 
 //EXAMPLE OF DOM EVENTS
-const button1 = document.getElementById("myButton");
-button1.addEventListener("click", function () {
-  alert("Button clicked!");
-});
+// const button1 = document.getElementById("myButton");
+// button1.addEventListener("click", function () {
+//   alert("Button clicked!");
+// });
 
-const inputField = document.getElementById("myInput");
-inputField.addEventListener("input", function () {
-  console.log("Input changed:", inputField.value);
-});
+// const inputField = document.getElementById("myInput");
+// inputField.addEventListener("input", function () {
+//   console.log("Input changed:", inputField.value);
+// });
 //types of events
 //1. Mouse Events: These events are triggered by mouse actions, such as clicks, double-clicks, mouse movements, and hovering over elements.
 //2. Keyboard Events: These events are triggered by keyboard actions, such as key presses and releases.
@@ -692,10 +732,10 @@ input.addEventListener("input", (event) => {
 //change events
 //Change events are triggered when the value of an input element changes and the element loses focus, such as when a user selects a different option from a dropdown menu or checks/unchecks a checkbox.
 //  The `change` event is commonly used to listen for changes in input elements and respond accordingly.
-const select = document.querySelector("#mySelect");
-select.addEventListener("change", (event) => {
-  console.log(event.target.value);
-});
+// const select = document.querySelector("#mySelect");
+// select.addEventListener("change", (event) => {
+//   console.log(event.target.value);
+// });
 
 let countrySelect = document.getElementById("country");
 countrySelect.addEventListener("change", function () {
@@ -717,13 +757,13 @@ form.addEventListener("submit", function (event) {
 //Keyboard events are triggered by user interactions with the keyboard, such as pressing or releasing keys.
 //  The most common keyboard events are `keydown`, `keyup`, and `keypress` (deprecated).
 //  These events allow developers to respond to specific key actions and implement custom behavior based on user input.
-const inputField1 = document.getElementById("myInput");
-inputField1.addEventListener("keydown", function (event) {
-  console.log("Key down:", event.key);
-});
-inputField1.addEventListener("keyup", function (event) {
-  console.log("Key up:", event.key);
-});
+// const inputField1 = document.getElementById("myInput");
+// inputField1.addEventListener("keydown", function (event) {
+//   console.log("Key down:", event.key);
+// });
+// inputField1.addEventListener("keyup", function (event) {
+//   console.log("Key up:", event.key);
+// });
 
 //form validation
 //Form validation is the process of checking user input in a form to ensure that it meets certain criteria before the form is submitted.
@@ -775,3 +815,15 @@ let name1 = "John"; //block scope
 //Use let when you need to reassign a variable's value within a block scope.
 //Use const when you want to declare a variable that should not be reassigned and remains constant.
 //Use var when you need function-scoped variables, but it's generally recommended to use let and const for better scoping and maintainability.
+
+//Arrow Functions =>
+const addition = (a, b) => {
+  return a + b;
+};
+
+console.log(addition(2, 3));
+
+//Basic syntax
+//Parameters
+//Implicit return
+//Arrow functions with map(), filter(), etc.

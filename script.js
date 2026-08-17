@@ -824,6 +824,61 @@ const addition = (a, b) => {
 console.log(addition(2, 3));
 
 //Basic syntax
+const sayHello = () => "Hello";
 //Parameters
+//one parameter
+const square1 = (x) => x * x;
+console.log(square1(5)); //25
+
+//multiple parameters
+const multiply2 = (a, b) => a * b;
+console.log(multiply2(4, 5)); //20
+
 //Implicit return
+const greet3 = (name) => `Hello, ${name}!`;
+console.log(greet3("Alice")); //Hello, Alice!
+
+//multiple statements
+const calculate = (a, b) => {
+  const sum = a + b;
+  const product = a * b;
+  return { sum, product };
+};
+console.log(calculate(3, 4)); // { sum: 7, product: 12 }
+
 //Arrow functions with map(), filter(), etc.
+const numbers1 = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers1.map((num) => num * num);
+console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+
+//Arrow functions and this
+//Arrow functions do not have their own this context. Instead, they inherit this from the surrounding lexical scope.
+//  This behavior is particularly useful in scenarios where you want to preserve the context of this, such as in event handlers or callbacks.
+
+//with filter
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 20 },
+];
+const adults = people.filter((person) => person.age >= 25);
+console.log(adults); // [{ name: "Alice", age: 25 }, { name: "Bob", age: 30 }]
+
+//forEach with arrow function
+const fruits1 = ["Apple", "Banana", "Cherry"];
+fruits1.forEach((fruit) => {
+  console.log(fruit);
+});
+
+//find
+const numbers2 = [1, 2, 3, 4, 5];
+const foundNumber = numbers2.find((num) => num > 3);
+console.log(foundNumber); // 4
+
+//Template Literals
+let questionOne = `What is your name?`;
+let answer = `My name is ${name}.`;
+console.log(answer); //My name is john.
+//Backticks `
+//${} interpolation
+//Multi-line strings

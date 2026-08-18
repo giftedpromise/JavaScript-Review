@@ -553,6 +553,25 @@ console.log(filtered); // [6, 7]
 let sum2 = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum2); // 35
 
+//Array destructuring
+let num = [1, 2, 3, 4, 5];
+let [first, second, ...rest] = num;
+console.log(first); // 1
+console.log(second); // 2
+console.log(rest); // [3, 4, 5]
+
+//spread operator in Arrays
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let arr3 = [...arr1, ...arr2];
+console.log(arr3); // [1, 2, 3, 4, 5, 6]
+
+//Rest operator in Arrays
+let [first1, second1, ...rest1] = arr3;
+console.log(first1); // 1
+console.log(second1); // 2
+console.log(rest1); // [3, 4, 5, 6]
+
 //loops in JavaScript
 //Loops are used to execute a block of code repeatedly as long as a specified condition is true.
 //  JavaScript provides several types of loops, including `for`, `while`, and `do...while` loops.

@@ -554,18 +554,24 @@ let sum2 = numbers.reduce((acc, num) => acc + num, 0);
 console.log(sum2); // 35
 
 //Array destructuring
-let num = [1, 2, 3, 4, 5];
-let [first, second, ...rest] = num;
+let numb = [1, 2, 3, 4, 5];
+let [first, second, ...rest] = numb;
 console.log(first); // 1
 console.log(second); // 2
 console.log(rest); // [3, 4, 5]
 
 //spread operator in Arrays
+//explain spread operator in Arrays
+//Spread takes values apart/spreads them out.
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5, 6];
 let arr3 = [...arr1, ...arr2];
 console.log(arr3); // [1, 2, 3, 4, 5, 6]
+let newArr = [...arr3, 7, 8, 9];
+console.log(newArr); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+//The Rest operator (...) in JavaScript allows you to collect multiple values
+//  into a single array or object.
 //Rest operator in Arrays
 let [first1, second1, ...rest1] = arr3;
 console.log(first1); // 1
@@ -901,3 +907,19 @@ console.log(answer); //My name is john.
 //Backticks `
 //${} interpolation
 //Multi-line strings
+
+//optional chaining
+//Optional chaining is a feature in JavaScript that allows you to safely access nested properties
+//  of an object without having to check if each property in the chain exists.
+//  It uses the `?.` operator to short-circuit and return `undefined` if any part of
+// the chain is `null` or `undefined`, preventing runtime errors.
+//example of optional chaining
+const user = {
+  name: "John",
+  address: {
+    street: "123 Main St",
+    city: "New York",
+  },
+};
+console.log(user.address?.street); // 123 Main St
+console.log(user.contact?.email); // undefined

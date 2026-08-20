@@ -963,3 +963,76 @@ console.log("Five");
 
 //setTimeout() is a built-in JavaScript function that allows you to schedule
 //  the execution of a function after a specified delay in milliseconds.
+//setTimeout() allows you to execute a function after a specified amount of time.
+console.log("Start");
+
+setTimeout(() => {
+  console.log("This message will be displayed after 2 seconds");
+}, 2000);
+console.log("End");
+
+//setInterval() is a built-in JavaScript function that allows you to execute a
+// function repeatedly at specified intervals in milliseconds.
+setInterval(() => {
+  console.log("This message will be displayed every 3 seconds");
+}, 3000);
+
+//callbacks
+//what is a callback function?
+// A callback function is a function that is passed as an argument to
+//  another function and is executed at a later time,
+// typically after some asynchronous operation has completed.
+
+//example of callback function
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { id: 1, name: "John Doe" };
+    callback(data);
+  }, 1000);
+}
+
+fetchData(function (data) {
+  console.log("Data received:", data);
+});
+
+//Promises
+//A promise is an object that represents the eventual completion (or failure)
+//  of an asynchronous operation and its resulting value.
+//  It allows you to handle asynchronous operations in a more structured and
+// readable way compared to callbacks.
+//  A promise can be in one of three states: pending,
+//  fulfilled, or rejected.
+//  Promises provide methods like `then()`, `catch()`, and
+// `finally()` to handle the resolved or rejected values.
+//example of promise
+const fetchData1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const data = { id: 1, name: "John Doe" };
+    resolve(data);
+  }, 1000);
+});
+
+fetchData1
+  .then((data) => {
+    console.log("Data received:", data);
+  })
+  .catch((error) => {
+    console.error("Error occurred:", error);
+  });
+
+async function getUser() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1",
+    );
+
+    const data = await response.json();
+    console.log(data);
+    console.log(data.name);
+    console.log(data.email);
+  } catch (error) {
+    console.log("Something went wrong:", error);
+  }
+}
+
+getUser();

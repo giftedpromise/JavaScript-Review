@@ -923,3 +923,43 @@ const user = {
 };
 console.log(user.address?.street); // 123 Main St
 console.log(user.contact?.email); // undefined
+
+//nullish coalescing operator
+//The nullish coalescing operator (??) is a feature in JavaScript that allows you
+//  to provide a default value for a variable or expression when it is `null`
+// or `undefined`.
+//  It returns the right-hand operand if the left-hand operand is `null` or `undefined`, otherwise it returns the left-hand operand.
+//example of nullish coalescing operator
+const user1 = {
+  name: "Alice",
+  age: null,
+};
+
+const userAge = user1.age ?? 18; // If age is null or undefined, use 18 as default
+console.log(userAge); // 18
+
+//modules
+//Modules are a way to organize and encapsulate code in JavaScript.
+//  They allow you to split your code into separate files, each with its own scope,
+//  and import/export functionality between them.
+//  Modules help improve code maintainability, reusability, and prevent
+//  naming conflicts.
+
+//asychronous programming
+//Asynchronous programming is a programming paradigm that allows tasks to run independently of the main program flow,
+//  enabling non-blocking operations and improving performance.
+//  In JavaScript, asynchronous programming is commonly achieved using callbacks, promises, and async/await syntax.
+//  It is particularly useful for handling tasks that involve I/O operations, such as fetching data from APIs or reading files.
+console.log("One");
+setTimeout(() => {
+  console.log("Two");
+}, 2000);
+console.log("Three");
+
+setTimeout(() => {
+  console.log("Four");
+}, 1000);
+console.log("Five");
+
+//setTimeout() is a built-in JavaScript function that allows you to schedule
+//  the execution of a function after a specified delay in milliseconds.
